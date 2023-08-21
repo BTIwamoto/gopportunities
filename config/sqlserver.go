@@ -8,7 +8,7 @@ import (
 
 func InitializeSQLServer() (*gorm.DB, error) {
 	logger := GetLogger("sqlServer")
-	connString := "sqlserver://sa:Hmnioq@183@localhost:1433?database=Opportunities&connection+timeout=30"
+	connString := "sqlserver://sa:superSecretPassword@localhost:1433?database=Opportunities&connection+timeout=30"
 
 	//Create Database and Connect
 	db, err := gorm.Open(sqlserver.Open(connString), &gorm.Config{})
